@@ -1,9 +1,14 @@
 param(
-    [Parameter(Mandatory = $true)]
+    [Parameter(Mandatory = $false)]
     [string]$TargetDir
 )
 
 $ErrorActionPreference = "Stop"
+
+if ([string]::IsNullOrWhiteSpace($TargetDir)) {
+    Write-Output "Использование: .\scripts\bootstrap.ps1 C:\путь\к\проекту"
+    exit 1
+}
 
 $cursorDir = Join-Path $TargetDir ".cursor"
 $docsDir = Join-Path $TargetDir "docs"
