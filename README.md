@@ -9,6 +9,7 @@
 - `.cursor/rules/02-architecture-principles.mdc` — архитектурные принципы и контрактные риски;
 - `.cursor/rules/03-repo-operations.mdc` — файловые операции, миграции и рискованные изменения;
 - `.cursor/rules/04-docs-concepts.mdc` — локальное правило для документации в `docs`;
+- `.cursor/rules/10-python-code-review.mdc` — локальное правило для ревью Python-кода;
 - `.cursor/rules/1x-*.mdc.example` — примеры компонентных правил;
 - `.cursor/rules/8x-*.mdc.example` — примеры временных и миграционных правил;
 - `.cursor/rules/90-verification.mdc` — обязательная проверка результата;
