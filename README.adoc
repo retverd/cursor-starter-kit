@@ -36,9 +36,9 @@
     02-architecture-principles.mdc
     03-repo-operations.mdc
     04-docs-concepts.mdc
-    10-python-code-review.mdc
-    1x-antora-docs.mdc
+    30-antora-docs.mdc
     90-verification.mdc
+    91-code-review.mdc
 
 docs/
   antora.yml
@@ -59,12 +59,12 @@ scripts/
 
 == Как использовать
 
-1. Создайте новый GitLab-проект.
-2. Запустите `scripts/bootstrap.sh` или `scripts/bootstrap.ps1`, передав путь к целевому репозиторию.
-3. Заполните `docs/antora.yml`: `name`, `title`, `version`.
-4. Заполните `docs/modules/ROOT/pages/architecture/overview.adoc`.
-5. Проверьте `docs/modules/ROOT/nav.adoc`.
-6. Удалите нерелевантные примеры правил и страниц.
+1. Создайте новый GitLab-проект;
+2. Запустите `scripts/bootstrap.sh` или `scripts/bootstrap.ps1`, передав путь к целевому репозиторию;
+3. Заполните `docs/antora.yml`: `name`, `title`, `version`;
+4. Заполните `docs/modules/ROOT/pages/architecture/overview.adoc`;
+5. Проверьте `docs/modules/ROOT/nav.adoc`;
+6. Удалите нерелевантные примеры правил и страниц;
 7. Зарегистрируйте репозиторий в центральном `antora-playbook.yml` через `start_path: docs`.
 
 Подробный процесс описан в `docs/modules/ROOT/pages/workflows/new-project-bootstrap.adoc` и `docs/modules/ROOT/pages/workflows/antora-component-repo.adoc`.
