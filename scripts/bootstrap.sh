@@ -9,21 +9,19 @@ if [ -z "$TARGET_DIR" ]; then
 fi
 
 mkdir -p "$TARGET_DIR/.cursor"
-mkdir -p "$TARGET_DIR/docs"
 
 cp -R ./.cursor/rules "$TARGET_DIR/.cursor/"
-cp -R ./docs/architecture "$TARGET_DIR/docs/"
-cp -R ./docs/components "$TARGET_DIR/docs/"
-cp -R ./docs/workflows "$TARGET_DIR/docs/"
-cp -R ./docs/templates "$TARGET_DIR/docs/"
+cp -R ./docs "$TARGET_DIR/"
+cp ./README.adoc "$TARGET_DIR/"
 cp ./.gitignore "$TARGET_DIR/" || true
 
 cat <<MSG
 Инициализация завершена.
 
 Следующие шаги:
-1. Проверьте и сократите правила под проект.
-2. Заполните docs/architecture/overview.md.
-3. Заполните docs/components/*.
-4. Адаптируйте glob-шаблоны под реальную структуру репозитория.
+1. Заполните docs/antora.yml: name, title и version.
+2. Заполните docs/modules/ROOT/pages/architecture/overview.adoc.
+3. Проверьте docs/modules/ROOT/nav.adoc.
+4. Зарегистрируйте репозиторий в центральном antora-playbook.yml через start_path: docs.
+5. Проверьте и сократите правила Cursor под проект.
 MSG

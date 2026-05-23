@@ -1,0 +1,17 @@
+* xref:index.adoc[]
+* Архитектура
+** xref:architecture/overview.adoc[]
+** xref:architecture/decisions.adoc[]
+** xref:architecture/rules.adoc[]
+* Компоненты
+** xref:components/backend.adoc[]
+** xref:components/frontend.adoc[]
+** xref:components/data-platform.adoc[]
+* Процессы
+** xref:workflows/new-project-bootstrap.adoc[]
+** xref:workflows/adding-new-rule.adoc[]
+** xref:workflows/antora-component-repo.adoc[]
+* Шаблоны
+** xref:templates/adr-template.adoc[]
+** xref:templates/component-doc-template.adoc[]
+** xref:templates/rule-change-proposal-template.adoc[]

@@ -1,0 +1,5 @@
+name: cursor-starter-kit
+title: Cursor Starter Kit
+version: true
+nav:
+  - modules/ROOT/nav.adoc

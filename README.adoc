@@ -1,0 +1,71 @@
+= Cursor Starter Kit
+
+Шаблон для запуска репозиториев компонентов в Cursor с управляемым контекстом агента и документацией в формате AsciiDoc, которая собирается в статический сайт через центральный Antora playbook.
+
+== Назначение
+
+Репозиторий помогает создать новый проект компонента, в котором:
+
+* правила Cursor хранятся в `.cursor/rules/`;
+* пользовательская и проектная документация хранятся в `docs/modules/ROOT/pages/`;
+* Antora-дескриптор компонента находится в `docs/antora.yml`;
+* GitLab показывает обзор репозитория из `README.adoc`;
+* центральный репозиторий документации подключает компонент через `start_path: docs`.
+
+== Принцип базового каркаса
+
+**Правила** задают операционные инструкции для агента.
+
+**Документация** объясняет цели, границы, решения и компромиссы, а также публикуется в Antora-сайте.
+
+**Глобальный контекст** должен оставаться коротким; технические детали должны жить в локальных правилах или компонентной документации.
+
+== Границы
+
+Этот репозиторий не содержит центральный Antora playbook, Docker-сборку сайта, UI-тему и публикацию.
+Эти ответственности остаются в центральном репозитории документации.
+
+== Структура
+
+[source,text]
+----
+.cursor/
+  rules/
+    00-agent-core.mdc
+    01-rules-generation.mdc
+    02-architecture-principles.mdc
+    03-repo-operations.mdc
+    04-docs-concepts.mdc
+    10-python-code-review.mdc
+    1x-antora-docs.mdc
+    90-verification.mdc
+
+docs/
+  antora.yml
+  modules/
+    ROOT/
+      nav.adoc
+      pages/
+        index.adoc
+        architecture/
+        components/
+        workflows/
+        templates/
+
+scripts/
+  bootstrap.sh
+  bootstrap.ps1
+----
+
+== Как использовать
+
+1. Создайте новый GitLab-проект.
+2. Запустите `scripts/bootstrap.sh` или `scripts/bootstrap.ps1`, передав путь к целевому репозиторию.
+3. Заполните `docs/antora.yml`: `name`, `title`, `version`.
+4. Заполните `docs/modules/ROOT/pages/architecture/overview.adoc`.
+5. Проверьте `docs/modules/ROOT/nav.adoc`.
+6. Удалите нерелевантные примеры правил и страниц.
+7. Зарегистрируйте репозиторий в центральном `antora-playbook.yml` через `start_path: docs`.
+
+Подробный процесс описан в `docs/modules/ROOT/pages/workflows/new-project-bootstrap.adoc` и `docs/modules/ROOT/pages/workflows/antora-component-repo.adoc`.
+

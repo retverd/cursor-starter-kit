@@ -13,7 +13,15 @@
 ## [Не выпущено]
 ### Добавлено
 
-- добавлено локальное правило `10-python-code-review.mdc` для ревью Python-кода.
+- добавлено локальное правило `10-python-code-review.mdc` для ревью Python-кода;
+- добавлено локальное правило `1x-antora-docs.mdc` для контракта Antora-компонента и AsciiDoc-ссылок;
+- добавлен Antora-каркас документации: `docs/antora.yml`, `docs/modules/ROOT/nav.adoc` и страницы в `docs/modules/ROOT/pages/`.
+
+### Изменено
+
+- документация в `docs` переведена с Markdown на AsciiDoc и структуру Antora-компонента;
+- bootstrap-скрипты теперь создают репозиторий компонента с `README.adoc` и `start_path: docs`;
+- корневой README переведён в `README.adoc` для GitLab.
 
 ## [0.2.0] - 2026-05-03
 ### Изменено
