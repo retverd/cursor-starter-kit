@@ -2,6 +2,7 @@
 * Архитектура
 ** xref:architecture/overview.adoc[]
 ** xref:architecture/decisions.adoc[]
+** xref:architecture/adr-001-skill-for-adr.adoc[]
 ** xref:architecture/rules.adoc[]
 * Компоненты
 ** xref:components/backend.adoc[]
