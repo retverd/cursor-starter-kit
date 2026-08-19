@@ -7,6 +7,8 @@
 ** xref:components/backend.adoc[]
 ** xref:components/frontend.adoc[]
 ** xref:components/data-platform.adoc[]
+* Миграции
+** xref:github-to-gitlab-migration.adoc[]
 * Процессы
 ** xref:workflows/new-project-bootstrap.adoc[]
 ** xref:workflows/adding-new-rule.adoc[]
